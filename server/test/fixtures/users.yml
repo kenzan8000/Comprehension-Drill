@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  device_token: MyString
+  language: MyString
+
+two:
+  device_token: MyString
+  language: MyString
