@@ -5,21 +5,16 @@ class Tasks::ScrapingArticlesTask
 
   def self.execute
     agent = Mechanize.new
-    page = agent.get('http://qiita.com/tags/Ruby/items')
-
-    init_page = Yasuri.pages_init '//*[@id="main"]/div/div/div[1]/section/div[2]/ul/li[7]/a', limit:3 do
-      text_page_idx '//*[@id="main"]/div/div/div[1]/section/div[2]/ul/li[@class="active"]/a', proc: :to_i
-
-      struct_entries '//*[@id="main"]/div/div/div[1]/section/div[1]/article' do
-        text_author './div[2]/div[1]/a'
-        text_date   './div[2]/div[1]/text()', truncate:/posted on (.+)/
-        text_title  './div[2]/div[2]/h1/a'
-        text_stock_count   './div[3]/ul/li[1]',   proc: :to_i
-        text_comment_count './div[3]/ul/li[2]/a', proc: :to_i
-      end
+    #page = agent.get('http://www.breakingnewsenglish.com/1509/150929-the-lost-city-of-z.html')
+    page = agent.get('http://www.breakingnewsenglish.com/1509/150926-selfies.html')
+    init_page = Yasuri.pages_init '/html', limit:1 do
+      text_title '/html/head/title'
+      text_body '/html/body/center/table[4]/tr[1]/td/div[1]/table[2]/tr/td[1]/blockquote'
+      text_question '/html/body/center/table[4]/tr[2]/td/blockquote[3]/table[2]'
     end
 
-    jj init_page.inject(agent, page)
+    json = init_page.inject(agent, page)
+    jj json
   end
 
 end
