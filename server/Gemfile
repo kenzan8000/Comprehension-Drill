@@ -19,6 +19,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'whenever', :require => false
 gem 'houston'
 gem 'yasuri'
+gem 'simple-rss'
 
 group :development, :test do
   gem 'sqlite3'
