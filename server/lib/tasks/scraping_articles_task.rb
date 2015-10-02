@@ -3,6 +3,7 @@ require 'json'
 require 'simple-rss'
 require 'open-uri'
 
+
 class Tasks::ScrapingArticlesTask
 
   def self.execute
@@ -13,6 +14,7 @@ class Tasks::ScrapingArticlesTask
       # scrape the web sites
       rss_items.each do |rss_item|
         self.scrape(web_site, rss_item)
+        break
       end
     end
   end
@@ -23,14 +25,30 @@ class Tasks::ScrapingArticlesTask
   end
 
   def self.scrape(web_site, rss_item)
+    body_xpaths = web_site.article_body_xpath.split(',')
+    question_xpaths = web_site.article_question_xpath.split(',')
+
+    # scrape
     agent = Mechanize.new
     page = agent.get(rss_item.link)
-    init_page = Yasuri.pages_init '/html', limit:1 do
-      text_body web_site.article_body_xpath
-      text_question web_site.article_question_xpath
+    scraping_rule = Yasuri.pages_init '/html', limit:1 do
+      body_xpaths.each_with_index do |xpath, i|
+        send("text_body_#{i}", xpath)
+      end
+      question_xpaths.each_with_index do |xpath, i|
+        send("text_question_#{i}", xpath)
+      end
     end
-    json = init_page.inject(agent, page)
-    jj json
+    article_jsons = scraping_rule.inject(agent, page)
+
+    # make article
+    article_jsons.each do |article_json|
+      #puts rss_item.title
+      #puts '///////////////////////////'
+      #puts article_json['body'].gsub(/[\t]|[\n]{2,}/, '').gsub(/[\s]{2,}/, "\n\n")
+      #puts '///////////////////////////'
+      #puts article_json['question'].gsub(/[\t]|[\n]{2,}/, '').gsub(/[\s]{2,}/, '')
+    end
   end
 
 end
