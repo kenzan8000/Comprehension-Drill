@@ -1,5 +1,4 @@
 class WebSite < ActiveHash::Base
-  has_many :articles, :dependent => :destroy
 
   self.data = [
     # id, link, title, description, language, rss
