@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 20150919140356) do
     t.integer  "web_site_id"
     t.string   "link"
     t.string   "title"
-    t.datetime "pubDate"
+    t.string   "language"
+    t.datetime "pub_date"
     t.text     "body"
     t.text     "question"
     t.datetime "created_at",  null: false

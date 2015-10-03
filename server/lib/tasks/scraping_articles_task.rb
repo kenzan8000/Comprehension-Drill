@@ -47,7 +47,8 @@ class Tasks::ScrapingArticlesTask
       article.web_site_id = web_site.id
       article.link = rss_item.link
       article.title = rss_item.title
-      article.pubDate = rss_item.pubDate
+      article.language = web_site.language
+      article.pub_date = rss_item.pubDate
       article.body = self.integrate(article_json, 'body')
       article.question = self.integrate(article_json, 'question')
     end

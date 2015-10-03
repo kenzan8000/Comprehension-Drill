@@ -4,7 +4,8 @@ class CreateArticles < ActiveRecord::Migration
       t.integer :web_site_id
       t.string :link
       t.string :title
-      t.datetime :pubDate
+      t.string :language
+      t.datetime :pub_date
       t.text :body
       t.text :question
 

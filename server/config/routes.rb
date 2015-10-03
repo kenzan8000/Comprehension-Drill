@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get 'article'
+  get 'article', :to => 'article#index'
 end
