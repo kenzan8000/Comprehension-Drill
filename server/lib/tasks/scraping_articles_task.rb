@@ -3,7 +3,6 @@ require 'json'
 require 'simple-rss'
 require 'open-uri'
 
-
 class Tasks::ScrapingArticlesTask
 
   def self.execute
@@ -13,8 +12,9 @@ class Tasks::ScrapingArticlesTask
       rss_items = self.parse_rss web_site.rss
       # scrape the web sites
       rss_items.each do |rss_item|
-        self.scrape(web_site, rss_item)
-        break
+        next if Article.exists?(:link => rss_item.link)
+        article = self.scrape(web_site, rss_item)
+        article.save if article.valid?
       end
     end
   end
@@ -42,13 +42,27 @@ class Tasks::ScrapingArticlesTask
     article_jsons = scraping_rule.inject(agent, page)
 
     # make article
+    article = Article.new
     article_jsons.each do |article_json|
-      #puts rss_item.title
-      #puts '///////////////////////////'
-      #puts article_json['body'].gsub(/[\t]|[\n]{2,}/, '').gsub(/[\s]{2,}/, "\n\n")
-      #puts '///////////////////////////'
-      #puts article_json['question'].gsub(/[\t]|[\n]{2,}/, '').gsub(/[\s]{2,}/, '')
+      article.web_site_id = web_site.id
+      article.link = rss_item.link
+      article.title = rss_item.title
+      article.pubDate = rss_item.pubDate
+      article.body = self.integrate(article_json, 'body')
+      article.question = self.integrate(article_json, 'question')
     end
+    article
+  end
+
+  def self.integrate(hash, hash_key)
+    result = ''
+    i = 0
+    while hash.has_key?("#{hash_key}_#{i}") do
+      result += "\n\n" if i != 0
+      result += hash["#{hash_key}_#{i}"].strip
+      i = i + 1
+    end
+    result
   end
 
 end

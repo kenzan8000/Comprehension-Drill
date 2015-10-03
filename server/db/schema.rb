@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20150919140356) do
 
   create_table "articles", force: :cascade do |t|
     t.integer  "web_site_id"
+    t.string   "link"
     t.string   "title"
     t.datetime "pubDate"
     t.text     "body"
