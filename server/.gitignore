@@ -89,4 +89,6 @@ DerivedData
 *.swo
 Thumbs.db
 .gitconfig
-
+path/to/apple_development.pem
+path/to/apple_production.pem
+Gemfile.lock
