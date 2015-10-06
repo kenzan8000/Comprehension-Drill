@@ -3,10 +3,13 @@ ruby '2.1.2'
 
 gem 'rails', '4.2.1'
 
+# server
 gem 'puma'
 
+# model
 gem 'active_hash'
 
+# markup
 gem 'sass-rails', '~> 5.0'
 gem 'slim-rails'
 gem 'jquery-rails'
@@ -16,9 +19,16 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# encryption
+gem 'gibberish'
+
+# cron
 gem 'whenever', :require => false
+
+# push notification
 gem 'apns'
 
+# crawling
 gem 'yasuri'
 gem 'simple-rss'
 

@@ -1,5 +1,24 @@
 # Model
 
+## add encryption settings
+```
+$ vim config/encryption.yml
+```
+
+```yml
+development:
+  app_secret: 'hoge'
+  password: 'fuga'
+
+test:
+  app_secret: 'hoge'
+  password: 'fuga'
+
+production:
+  app_secret: 'hoge'
+  password: 'fuga'
+```
+
 ## generate model
 ```
 $ rails generate model ModelName hoge_fuga:integer foo_bar:integer
