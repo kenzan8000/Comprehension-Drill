@@ -1,0 +1,8 @@
+link_with 'comprehension-drill'
+platform :ios, '7.0'
+
+# Encryption
+pod 'CocoaSecurity'
+
+# network
+pod 'ISHTTPOperation'

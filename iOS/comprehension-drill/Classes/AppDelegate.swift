@@ -8,6 +8,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        let aes256 = CocoaSecurity.aesEncrypt(
+            "comprehension-drill-20151006",
+            key: NSString(string: "happier-birthday-19860410-kenzan").dataUsingEncoding(NSUTF8StringEncoding),
+            iv: NSString(string: "kenzan8000.org.c").dataUsingEncoding(NSUTF8StringEncoding)
+        )
+        print(aes256.base64)
         return true
     }
 

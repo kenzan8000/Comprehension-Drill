@@ -55,11 +55,7 @@ class UserController < ApplicationController
       cipher.decrypt
       cipher.key = encryption['key']
       cipher.iv = encryption['iv']
-      begin
-        do_succeed = false unless encryption['app_secret'] == (cipher.update(app_secret.unpack('m')[0]) + cipher.final)
-      rescue
-        do_succeed = false
-      end
+      do_succeed = false unless encryption['app_secret'] == (cipher.update(app_secret.unpack('m')[0]) + cipher.final)
     end
 
     if !do_succeed
