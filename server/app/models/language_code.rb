@@ -5,6 +5,10 @@ class LanguageCode < ActiveHash::Base
     {
       :id => 1,
       :name => 'en-us'
+    },
+    {
+      :id => 2,
+      :name => 'en-gb'
     }
   ]
 

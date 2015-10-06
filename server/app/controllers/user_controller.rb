@@ -61,7 +61,14 @@ class UserController < ApplicationController
     if !do_succeed
       application_code = 400
     elsif User.exists?(device_token: device_token) # update
+      user = User.find_by_device_token(device_token)
+      user.language = language
+      user.save if user.valid?
     else # new record
+      user = User.new
+      user.device_token = device_token
+      user.language = language
+      user.save if user.valid?
     end
 
     # response
