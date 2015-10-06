@@ -15,4 +15,5 @@ class WebSite < ActiveHash::Base
       :article_question_xpath => '/html/body/center/table[4]/tr[2]/td/blockquote[3]/table[2]/tr[1]/td[2]/p,/html/body/center/table[4]/tr[2]/td/blockquote[3]/table[2]/tr[2]/td[2]/p,/html/body/center/table[4]/tr[2]/td/blockquote[3]/table[2]/tr[3]/td[2]/p,/html/body/center/table[4]/tr[2]/td/blockquote[3]/table[2]/tr[4]/td[2]/p,/html/body/center/table[4]/tr[2]/td/blockquote[3]/table[2]/tr[5]/td[2]/p,/html/body/center/table[4]/tr[2]/td/blockquote[3]/table[2]/tr[6]/td[2]/p,/html/body/center/table[4]/tr[2]/td/blockquote[3]/table[2]/tr[7]/td[2]/p,/html/body/center/table[4]/tr[2]/td/blockquote[3]/table[2]/tr[8]/td[2]/p,/html/body/center/table[4]/tr[2]/td/blockquote[3]/table[2]/tr[9]/td[2]/p,/html/body/center/table[4]/tr[2]/td/blockquote[3]/table[2]/tr[10]/td[2]/p'
     }
   ]
+
 end

@@ -8,15 +8,18 @@ $ vim config/encryption.yml
 ```yml
 development:
   app_secret: 'hoge'
-  password: 'fuga'
+  key: 'fuga'
+  iv: 'foo'
 
 test:
   app_secret: 'hoge'
-  password: 'fuga'
+  key: 'fuga'
+  iv: 'foo'
 
 production:
   app_secret: 'hoge'
-  password: 'fuga'
+  key: 'fuga'
+  iv: 'foo'
 ```
 
 ## generate model

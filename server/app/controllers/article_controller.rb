@@ -29,6 +29,7 @@ class ArticleController < ApplicationController
   @apiSuccess {String} question question about the article
   @apiSuccess {String} created_at date the column was created
   @apiSuccess {String} updated_at date the column was updated
+  @apiSuccess {Number} application_code 200:success 400:client error
 
   @apiSuccessExample {json} Success-Response:
     {
@@ -45,7 +46,8 @@ class ArticleController < ApplicationController
           "created_at": "2015-05-07T01:25:39.744Z",
           "updated_at": "2015-05-07T01:25:39.744Z"
         }
-      ]
+      ],
+      "application_code": 200
     }
 =end
   def index
@@ -55,12 +57,13 @@ class ArticleController < ApplicationController
     language = params[:language]
     offset = 0 unless offset.kind_of?(Integer)
     count = 0 unless count.kind_of?(Integer)
-    language = 'en-us' unless language
+    language = '' unless language
 
     # response
     articles = Article.where(language: language).limit(count).offset(offset)
     json = Jbuilder.encode do |j|
-      j.articles(articles)
+      j.articles articles
+      j.application_code (articles.count > 0) ? 200 : 400
     end
     render json: json
   end
