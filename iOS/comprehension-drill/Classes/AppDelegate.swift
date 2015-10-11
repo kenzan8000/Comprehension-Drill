@@ -8,12 +8,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        /*
         let aes256 = CocoaSecurity.aesEncrypt(
             "comprehension-drill-20151006",
             key: NSString(string: "happier-birthday-19860410-kenzan").dataUsingEncoding(NSUTF8StringEncoding),
             iv: NSString(string: "kenzan8000.org.c").dataUsingEncoding(NSUTF8StringEncoding)
         )
         print(aes256.base64)
+        */
+        let settings = UIUserNotificationSettings(forTypes: [.Badge, .Sound, .Alert], categories: nil)
+        UIApplication.sharedApplication().registerForRemoteNotifications()
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
         return true
     }
 
@@ -32,6 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
     }
 
+    func application( application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData ) {
+        print("deviceToken: \(deviceToken.description)")
+    }
 
 }
 
