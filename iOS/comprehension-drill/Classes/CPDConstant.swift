@@ -23,3 +23,26 @@ func CPDNSStringFromClass(classType:AnyClass) -> String {
 
 
 /// MARK: - Notification
+
+
+/// MARK: - API
+
+/// Base URI
+#if LOCAL_SERVER
+let kURIBase =                          "http://localhost:3000"
+#elseif DEV_SERVER
+let kURIBase =                          "http://localhost:3000"
+#else
+let kURIBase =                          "http://localhost:3000"
+#endif
+
+
+/// MARK: - Article
+
+let kURIArticleAPI =                    kURIBase + "/article"
+
+struct CPDArticle {
+    struct API {
+        static let GetArticle =         kURIArticleAPI
+    }
+}

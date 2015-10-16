@@ -15,6 +15,11 @@
 		E64EB4861BC117250045E69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E64EB4851BC117250045E69D /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		E6AD5DC51BD0C50000753B24 /* CPDConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD5DC41BD0C50000753B24 /* CPDConstant.swift */; settings = {ASSET_TAGS = (); }; };
 		E6AD5DC91BD0C7FA00753B24 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD5DC81BD0C7FA00753B24 /* SwiftyJSON.swift */; settings = {ASSET_TAGS = (); }; };
+		E6CCA30B1BD0CB81000120B7 /* CPDArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3061BD0CB81000120B7 /* CPDArticle.swift */; settings = {ASSET_TAGS = (); }; };
+		E6CCA30C1BD0CB81000120B7 /* CPDArticleClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3071BD0CB81000120B7 /* CPDArticleClient.swift */; settings = {ASSET_TAGS = (); }; };
+		E6CCA30D1BD0CB81000120B7 /* CPDArticleOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3081BD0CB81000120B7 /* CPDArticleOperationQueue.swift */; settings = {ASSET_TAGS = (); }; };
+		E6CCA3151BD0CD04000120B7 /* NSMutableURLRequest+HTTPBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3111BD0CD04000120B7 /* NSMutableURLRequest+HTTPBody.swift */; settings = {ASSET_TAGS = (); }; };
+		E6CCA3161BD0CD04000120B7 /* NSURL+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3121BD0CD04000120B7 /* NSURL+Queries.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		E6AD5DC71BD0C7FA00753B24 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftyJSON.h; path = SwiftyJSON/Source/SwiftyJSON.h; sourceTree = "<group>"; };
 		E6AD5DC81BD0C7FA00753B24 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = SwiftyJSON/Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		E6C08C5A1BC3F33C002188AD /* comprehension-drill-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "comprehension-drill-Bridging-Header.h"; sourceTree = "<group>"; };
+		E6CCA3061BD0CB81000120B7 /* CPDArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPDArticle.swift; sourceTree = "<group>"; };
+		E6CCA3071BD0CB81000120B7 /* CPDArticleClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPDArticleClient.swift; sourceTree = "<group>"; };
+		E6CCA3081BD0CB81000120B7 /* CPDArticleOperationQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPDArticleOperationQueue.swift; sourceTree = "<group>"; };
+		E6CCA3111BD0CD04000120B7 /* NSMutableURLRequest+HTTPBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableURLRequest+HTTPBody.swift"; sourceTree = "<group>"; };
+		E6CCA3121BD0CD04000120B7 /* NSURL+Queries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Queries.swift"; sourceTree = "<group>"; };
 		E6ECA78A1BC1154400B50521 /* comprehension-drill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "comprehension-drill.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,6 +81,8 @@
 				E64EB47A1BC1168B0045E69D /* LaunchScreen.storyboard */,
 				E64EB47B1BC1168B0045E69D /* Main.storyboard */,
 				E6C08C5A1BC3F33C002188AD /* comprehension-drill-Bridging-Header.h */,
+				E6CCA3031BD0CB81000120B7 /* Article */,
+				E6CCA30E1BD0CD04000120B7 /* NSFoundation+Extension */,
 				E6AD5DC61BD0C7E900753B24 /* SwiftyJSON */,
 			);
 			path = Classes;
@@ -107,6 +119,25 @@
 				E6AD5DC81BD0C7FA00753B24 /* SwiftyJSON.swift */,
 			);
 			name = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		E6CCA3031BD0CB81000120B7 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				E6CCA3061BD0CB81000120B7 /* CPDArticle.swift */,
+				E6CCA3071BD0CB81000120B7 /* CPDArticleClient.swift */,
+				E6CCA3081BD0CB81000120B7 /* CPDArticleOperationQueue.swift */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
+		E6CCA30E1BD0CD04000120B7 /* NSFoundation+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E6CCA3111BD0CD04000120B7 /* NSMutableURLRequest+HTTPBody.swift */,
+				E6CCA3121BD0CD04000120B7 /* NSURL+Queries.swift */,
+			);
+			path = "NSFoundation+Extension";
 			sourceTree = "<group>";
 		};
 		E6ECA7811BC1154400B50521 = {
@@ -243,9 +274,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6AD5DC51BD0C50000753B24 /* CPDConstant.swift in Sources */,
+				E6CCA3151BD0CD04000120B7 /* NSMutableURLRequest+HTTPBody.swift in Sources */,
 				E64EB4831BC1168B0045E69D /* CPDViewController.swift in Sources */,
+				E6CCA30B1BD0CB81000120B7 /* CPDArticle.swift in Sources */,
 				E64EB4801BC1168B0045E69D /* AppDelegate.swift in Sources */,
+				E6CCA30D1BD0CB81000120B7 /* CPDArticleOperationQueue.swift in Sources */,
+				E6CCA3161BD0CD04000120B7 /* NSURL+Queries.swift in Sources */,
 				E6AD5DC91BD0C7FA00753B24 /* SwiftyJSON.swift in Sources */,
+				E6CCA30C1BD0CB81000120B7 /* CPDArticleClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
