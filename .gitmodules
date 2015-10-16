@@ -1,0 +1,3 @@
+[submodule "iOS/comprehension-drill/Classes/SwiftyJSON"]
+	path = iOS/comprehension-drill/Classes/SwiftyJSON
+	url = https://github.com/SwiftyJSON/SwiftyJSON.git

@@ -3,8 +3,8 @@ require 'apns'
 class Tasks::PostingNotificationTask
 
   def self.execute()
-    device_tokens = ['d36f1854e1cc97d21dc9787b4759b3e25345ee03ddc0a127a68ca8b7820f99a2']
-    alert = "test##{DateTime.now}"
+    device_tokens = ['aad105d2b7c36b3b47ed3de56254bf0dac381290fefe0db4314dbd79b278d969']
+    alert = "test#{DateTime.now}"
     self.post_notifications_via_apns(device_tokens, alert)
   end
 

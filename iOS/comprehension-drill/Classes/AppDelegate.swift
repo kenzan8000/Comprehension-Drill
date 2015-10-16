@@ -16,9 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         print(aes256.base64)
         */
+        /*
         let settings = UIUserNotificationSettings(forTypes: [.Badge, .Sound, .Alert], categories: nil)
         UIApplication.sharedApplication().registerForRemoteNotifications()
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        */
         return true
     }
 
@@ -37,9 +39,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
     }
 
-    func application( application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData ) {
-        print("deviceToken: \(deviceToken.description)")
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        //print("deviceToken: \(deviceToken.description)")
     }
+
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        //print("\(error)")
+    }
+
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        //print("\(userInfo)")
+    }
+
 
 }
 
