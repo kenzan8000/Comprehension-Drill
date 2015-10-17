@@ -15,6 +15,7 @@
 		E64EB4861BC117250045E69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E64EB4851BC117250045E69D /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		E6AD5DC51BD0C50000753B24 /* CPDConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD5DC41BD0C50000753B24 /* CPDConstant.swift */; settings = {ASSET_TAGS = (); }; };
 		E6AD5DC91BD0C7FA00753B24 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD5DC81BD0C7FA00753B24 /* SwiftyJSON.swift */; settings = {ASSET_TAGS = (); }; };
+		E6BB73E21BD1E63400DFDC6F /* CPDConstant-Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BB73E11BD1E63400DFDC6F /* CPDConstant-Private.swift */; settings = {ASSET_TAGS = (); }; };
 		E6C7298C1BD17D3C00AFEFA4 /* CPDCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C7298B1BD17D3C00AFEFA4 /* CPDCoreDataManager.swift */; settings = {ASSET_TAGS = (); }; };
 		E6C7298E1BD17D5F00AFEFA4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C7298D1BD17D5F00AFEFA4 /* CoreData.framework */; };
 		E6C729911BD17D8500AFEFA4 /* CPDModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6C7298F1BD17D8500AFEFA4 /* CPDModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
@@ -37,6 +38,7 @@
 		E6AD5DC41BD0C50000753B24 /* CPDConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPDConstant.swift; sourceTree = "<group>"; };
 		E6AD5DC71BD0C7FA00753B24 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftyJSON.h; path = SwiftyJSON/Source/SwiftyJSON.h; sourceTree = "<group>"; };
 		E6AD5DC81BD0C7FA00753B24 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = SwiftyJSON/Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		E6BB73E11BD1E63400DFDC6F /* CPDConstant-Private.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CPDConstant-Private.swift"; sourceTree = "<group>"; };
 		E6C08C5A1BC3F33C002188AD /* comprehension-drill-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "comprehension-drill-Bridging-Header.h"; sourceTree = "<group>"; };
 		E6C7298B1BD17D3C00AFEFA4 /* CPDCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPDCoreDataManager.swift; sourceTree = "<group>"; };
 		E6C7298D1BD17D5F00AFEFA4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -83,6 +85,7 @@
 		E64EB4781BC1168B0045E69D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E6BB73E11BD1E63400DFDC6F /* CPDConstant-Private.swift */,
 				E6AD5DC41BD0C50000753B24 /* CPDConstant.swift */,
 				E64EB4791BC1168B0045E69D /* AppDelegate.swift */,
 				E64EB47C1BC1168B0045E69D /* CPDViewController.swift */,
@@ -305,6 +308,7 @@
 				E6CCA3151BD0CD04000120B7 /* NSMutableURLRequest+HTTPBody.swift in Sources */,
 				E6C7298C1BD17D3C00AFEFA4 /* CPDCoreDataManager.swift in Sources */,
 				E64EB4831BC1168B0045E69D /* CPDViewController.swift in Sources */,
+				E6BB73E21BD1E63400DFDC6F /* CPDConstant-Private.swift in Sources */,
 				E6CCA30B1BD0CB81000120B7 /* CPDArticle.swift in Sources */,
 				E64EB4801BC1168B0045E69D /* AppDelegate.swift in Sources */,
 				E6CCA30D1BD0CB81000120B7 /* CPDArticleOperationQueue.swift in Sources */,
