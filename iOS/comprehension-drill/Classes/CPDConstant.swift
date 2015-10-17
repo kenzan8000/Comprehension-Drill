@@ -4,9 +4,9 @@
  * display log
  * @param body log
  */
-func CPDLOG(str: String) {
+func CPDLOG(body: Any) {
 #if DEBUG
-    print("////////// CPD log\n" + str + "\n\n")
+    print(body)
 #endif
 }
 
@@ -29,8 +29,6 @@ func CPDNSStringFromClass(classType:AnyClass) -> String {
 
 /// Base URI
 #if LOCAL_SERVER
-let kURIBase =                          "http://localhost:3000"
-#elseif DEV_SERVER
 let kURIBase =                          "http://localhost:3000"
 #else
 let kURIBase =                          "http://localhost:3000"

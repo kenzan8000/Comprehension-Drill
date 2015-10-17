@@ -399,6 +399,7 @@
 				INFOPLIST_FILE = "comprehension-drill/Resources/Plists/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG -D LOCAL_SERVER";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.kenzan8000.comprehension-drill";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "comprehension-drill/Classes/comprehension-drill-Bridging-Header.h";

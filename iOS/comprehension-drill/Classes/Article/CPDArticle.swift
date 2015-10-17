@@ -16,6 +16,20 @@ class CPDArticle: NSManagedObject {
 
     /// MARK: - class method
 
+//    /**
+//     * GET articles
+//     **/
+//    class func request() {
+//        CPDArticleClient.sharedInstance.getArticle(
+//            offset: 0,
+//            count: 5,
+//            language: "en-us",
+//            completionHandler: { (json) in
+//                //CPDLOG(json)
+//            }
+//        )
+//    }
+
     /**
      * fetch datas from coredata
      * @param offset article's offset
