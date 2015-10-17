@@ -18,10 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         */
         /*
         let settings = UIUserNotificationSettings(forTypes: [.Badge, .Sound, .Alert], categories: nil)
-        UIApplication.sharedApplication().registerForRemoteNotifications()
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        UIApplication.sharedApplication().registerForRemoteNotifications()
         */
-        CPDArticle.request()
+        //CPDArticle.request()
         return true
     }
 
@@ -41,15 +41,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-        //print("deviceToken: \(deviceToken.description)")
+        //CPDLOG("deviceToken: \(deviceToken.description)")
     }
 
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-        //print("\(error)")
+        //CPDLOG(error)
     }
 
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        //print("\(userInfo)")
+        //CPDLOG(userInfo)
     }
 
 
