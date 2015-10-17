@@ -21,16 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().registerForRemoteNotifications()
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
         */
-
+        /*
         CPDArticleClient.sharedInstance.getArticle(
             offset: 1,
             count: 5,
             language: "en-us",
             completionHandler: { (json) in
-                CPDLOG("\(json)")
             }
         )
-
+        */
         return true
     }
 

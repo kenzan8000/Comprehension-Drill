@@ -23,7 +23,7 @@ class CPDArticleClient {
 
         // API URL
         let url = NSURL(
-            URLString: CPDArticle.API.GetArticle,
+            URLString: CPDAPI.GetArticle,
             queries: [
                 "offset" : "\(offset)",
                 "count" : "\(count)",
@@ -48,7 +48,7 @@ class CPDArticleClient {
      * cancel get article API
      **/
     func cancelGetArticle() {
-        CPDArticleOperationQueue.defaultQueue().cancelOperationsWithPath(NSURL(string: CPDArticle.API.GetArticle)!.path)
+        CPDArticleOperationQueue.defaultQueue().cancelOperationsWithPath(NSURL(string: CPDAPI.GetArticle)!.path)
     }
 
 }

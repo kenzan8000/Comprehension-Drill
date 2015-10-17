@@ -36,13 +36,9 @@ let kURIBase =                          "http://localhost:3000"
 let kURIBase =                          "http://localhost:3000"
 #endif
 
+struct CPDAPI {
+    static let GetArticle =         kURIBase + "/article"
+}
+
 
 /// MARK: - Article
-
-let kURIArticleAPI =                    kURIBase + "/article"
-
-struct CPDArticle {
-    struct API {
-        static let GetArticle =         kURIArticleAPI
-    }
-}
