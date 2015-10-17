@@ -16,28 +16,30 @@ class CPDArticle: NSManagedObject {
 
     /// MARK: - class method
 
-//    /**
-//     * GET articles
-//     **/
-//    class func request() {
-//        CPDArticleClient.sharedInstance.getArticle(
-//            offset: 0,
-//            count: 5,
-//            language: "en-us",
-//            completionHandler: { (json) in
-//                //CPDLOG(json)
-//            }
-//        )
-//    }
+    /**
+     * GET articles
+     **/
+    class func request() {
+        let language = "en-us"
+        let offset = CPDArticle.count(language: language)
+        let count = 10
+        CPDArticleClient.sharedInstance.getArticle(
+            offset: offset,
+            count: count,
+            language: language,
+            completionHandler: { (json) in
+                CPDLOG(json)
+                CPDArticle.save(json: json)
+            }
+        )
+    }
 
     /**
-     * fetch datas from coredata
-     * @param offset article's offset
-     * @param count article's count you want to get
+     * count article
      * @param language article's language
-     * @return [CPDArticle]
-     */
-    func fetch(offset offset: Int, count: Int, language: String) -> [CPDArticle] {
+     * @return number of article
+     **/
+    class func count(language language: String) -> Int {
         let context = CPDCoreDataManager.sharedInstance.managedObjectContext
 
         // make fetch request
@@ -46,7 +48,40 @@ class CPDArticle: NSManagedObject {
         fetchRequest.entity = entity
         fetchRequest.fetchBatchSize = 20
         let predicaets = [
-            NSPredicate(format: "(timestamp >= %@) AND (timestamp < %@)", offset, count),
+            NSPredicate(format: "language == %@", language),
+        ]
+        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicaets)
+        fetchRequest.returnsObjectsAsFaults = false
+        fetchRequest.resultType = .CountResultType
+
+        var count = 0
+        do {
+           let result = try context.executeFetchRequest(fetchRequest)
+           count = (result.first as! NSNumber).integerValue
+        }
+        catch { }
+        return count
+    }
+
+    /**
+     * fetch datas from coredata
+     * @param offset article's offset
+     * @param count article's count you want to get
+     * @param language article's language
+     * @return [CPDArticle]
+     */
+    class func fetch(offset offset: Int, count: Int, language: String) -> [CPDArticle] {
+        let context = CPDCoreDataManager.sharedInstance.managedObjectContext
+
+        // make fetch request
+        let fetchRequest = NSFetchRequest()
+        let entity = NSEntityDescription.entityForName("CPDArticle", inManagedObjectContext:context)
+        fetchRequest.entity = entity
+        fetchRequest.fetchBatchSize = 20
+        fetchRequest.fetchOffset = offset
+        fetchRequest.fetchLimit = count
+        let predicaets = [
+            NSPredicate(format: "language == %@", language),
         ]
         fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicaets)
         fetchRequest.returnsObjectsAsFaults = false
