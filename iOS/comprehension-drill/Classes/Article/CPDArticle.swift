@@ -18,8 +18,9 @@ class CPDArticle: NSManagedObject {
 
     /**
      * GET articles
+     * @param completionHandler (json: JSON) -> Void
      **/
-    class func request() {
+    class func request(completionHandler: (json: JSON) -> Void) {
         let language = "en-us"
         let offset = CPDArticle.count(language: language)
         let count = 10
@@ -27,10 +28,7 @@ class CPDArticle: NSManagedObject {
             offset: offset,
             count: count,
             language: language,
-            completionHandler: { (json) in
-                CPDLOG(json)
-                CPDArticle.save(json: json)
-            }
+            completionHandler: completionHandler
         )
     }
 
@@ -65,12 +63,10 @@ class CPDArticle: NSManagedObject {
 
     /**
      * fetch datas from coredata
-     * @param offset article's offset
-     * @param count article's count you want to get
      * @param language article's language
      * @return [CPDArticle]
      */
-    class func fetch(offset offset: Int, count: Int, language: String) -> [CPDArticle] {
+    class func fetch(language language: String) -> [CPDArticle] {
         let context = CPDCoreDataManager.sharedInstance.managedObjectContext
 
         // make fetch request
@@ -78,8 +74,8 @@ class CPDArticle: NSManagedObject {
         let entity = NSEntityDescription.entityForName("CPDArticle", inManagedObjectContext:context)
         fetchRequest.entity = entity
         fetchRequest.fetchBatchSize = 20
-        fetchRequest.fetchOffset = offset
-        fetchRequest.fetchLimit = count
+        //fetchRequest.fetchOffset = offset
+        //fetchRequest.fetchLimit = count
         let predicaets = [
             NSPredicate(format: "language == %@", language),
         ]

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		97F92033781846DBF895E620 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 869F54CF18E0D969B40C6BA8 /* libPods.a */; };
+		E649724D1BD61148000E140C /* CPDArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E649724B1BD61148000E140C /* CPDArticleTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		E649724E1BD61148000E140C /* CPDArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E649724C1BD61148000E140C /* CPDArticleTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		E64EB4801BC1168B0045E69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EB4791BC1168B0045E69D /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		E64EB4811BC1168B0045E69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64EB47A1BC1168B0045E69D /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		E64EB4821BC1168B0045E69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64EB47B1BC1168B0045E69D /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -30,6 +32,8 @@
 		40A2F9789489B567162A5692 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4FC71AB8B30E2CE759238B9C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		869F54CF18E0D969B40C6BA8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E649724B1BD61148000E140C /* CPDArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPDArticleTableViewCell.swift; sourceTree = "<group>"; };
+		E649724C1BD61148000E140C /* CPDArticleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPDArticleTableViewCell.xib; sourceTree = "<group>"; };
 		E64EB4791BC1168B0045E69D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E64EB47A1BC1168B0045E69D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E64EB47B1BC1168B0045E69D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				E6CCA3061BD0CB81000120B7 /* CPDArticle.swift */,
 				E6CCA3071BD0CB81000120B7 /* CPDArticleClient.swift */,
 				E6CCA3081BD0CB81000120B7 /* CPDArticleOperationQueue.swift */,
+				E649724B1BD61148000E140C /* CPDArticleTableViewCell.swift */,
+				E649724C1BD61148000E140C /* CPDArticleTableViewCell.xib */,
 			);
 			path = Article;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 			files = (
 				E64EB4811BC1168B0045E69D /* LaunchScreen.storyboard in Resources */,
 				E64EB4861BC117250045E69D /* Assets.xcassets in Resources */,
+				E649724E1BD61148000E140C /* CPDArticleTableViewCell.xib in Resources */,
 				E64EB4821BC1168B0045E69D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +316,7 @@
 				E6C7298C1BD17D3C00AFEFA4 /* CPDCoreDataManager.swift in Sources */,
 				E64EB4831BC1168B0045E69D /* CPDViewController.swift in Sources */,
 				E6BB73E21BD1E63400DFDC6F /* CPDConstant-Private.swift in Sources */,
+				E649724D1BD61148000E140C /* CPDArticleTableViewCell.swift in Sources */,
 				E6CCA30B1BD0CB81000120B7 /* CPDArticle.swift in Sources */,
 				E64EB4801BC1168B0045E69D /* AppDelegate.swift in Sources */,
 				E6CCA30D1BD0CB81000120B7 /* CPDArticleOperationQueue.swift in Sources */,
