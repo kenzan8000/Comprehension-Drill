@@ -8,24 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		97F92033781846DBF895E620 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 869F54CF18E0D969B40C6BA8 /* libPods.a */; };
-		E649724D1BD61148000E140C /* CPDArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E649724B1BD61148000E140C /* CPDArticleTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		E649724E1BD61148000E140C /* CPDArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E649724C1BD61148000E140C /* CPDArticleTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		E64EB4801BC1168B0045E69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EB4791BC1168B0045E69D /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		E64EB4811BC1168B0045E69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64EB47A1BC1168B0045E69D /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		E64EB4821BC1168B0045E69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64EB47B1BC1168B0045E69D /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		E64EB4831BC1168B0045E69D /* CPDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EB47C1BC1168B0045E69D /* CPDViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		E64EB4861BC117250045E69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E64EB4851BC117250045E69D /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		E6AD5DC51BD0C50000753B24 /* CPDConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD5DC41BD0C50000753B24 /* CPDConstant.swift */; settings = {ASSET_TAGS = (); }; };
-		E6AD5DC91BD0C7FA00753B24 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD5DC81BD0C7FA00753B24 /* SwiftyJSON.swift */; settings = {ASSET_TAGS = (); }; };
-		E6BB73E21BD1E63400DFDC6F /* CPDConstant-Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BB73E11BD1E63400DFDC6F /* CPDConstant-Private.swift */; settings = {ASSET_TAGS = (); }; };
-		E6C7298C1BD17D3C00AFEFA4 /* CPDCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C7298B1BD17D3C00AFEFA4 /* CPDCoreDataManager.swift */; settings = {ASSET_TAGS = (); }; };
+		E649724D1BD61148000E140C /* CPDArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E649724B1BD61148000E140C /* CPDArticleTableViewCell.swift */; };
+		E649724E1BD61148000E140C /* CPDArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E649724C1BD61148000E140C /* CPDArticleTableViewCell.xib */; };
+		E64EB4801BC1168B0045E69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EB4791BC1168B0045E69D /* AppDelegate.swift */; };
+		E64EB4811BC1168B0045E69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64EB47A1BC1168B0045E69D /* LaunchScreen.storyboard */; };
+		E64EB4821BC1168B0045E69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64EB47B1BC1168B0045E69D /* Main.storyboard */; };
+		E64EB4831BC1168B0045E69D /* CPDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EB47C1BC1168B0045E69D /* CPDViewController.swift */; };
+		E64EB4861BC117250045E69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E64EB4851BC117250045E69D /* Assets.xcassets */; };
+		E69595E61BE89B6100A62679 /* CPDArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69595E51BE89B6100A62679 /* CPDArticleViewController.swift */; };
+		E6AD5DC51BD0C50000753B24 /* CPDConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD5DC41BD0C50000753B24 /* CPDConstant.swift */; };
+		E6AD5DC91BD0C7FA00753B24 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD5DC81BD0C7FA00753B24 /* SwiftyJSON.swift */; };
+		E6BB73E21BD1E63400DFDC6F /* CPDConstant-Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BB73E11BD1E63400DFDC6F /* CPDConstant-Private.swift */; };
+		E6C7298C1BD17D3C00AFEFA4 /* CPDCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C7298B1BD17D3C00AFEFA4 /* CPDCoreDataManager.swift */; };
 		E6C7298E1BD17D5F00AFEFA4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C7298D1BD17D5F00AFEFA4 /* CoreData.framework */; };
-		E6C729911BD17D8500AFEFA4 /* CPDModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6C7298F1BD17D8500AFEFA4 /* CPDModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		E6CCA30B1BD0CB81000120B7 /* CPDArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3061BD0CB81000120B7 /* CPDArticle.swift */; settings = {ASSET_TAGS = (); }; };
-		E6CCA30C1BD0CB81000120B7 /* CPDArticleClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3071BD0CB81000120B7 /* CPDArticleClient.swift */; settings = {ASSET_TAGS = (); }; };
-		E6CCA30D1BD0CB81000120B7 /* CPDArticleOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3081BD0CB81000120B7 /* CPDArticleOperationQueue.swift */; settings = {ASSET_TAGS = (); }; };
-		E6CCA3151BD0CD04000120B7 /* NSMutableURLRequest+HTTPBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3111BD0CD04000120B7 /* NSMutableURLRequest+HTTPBody.swift */; settings = {ASSET_TAGS = (); }; };
-		E6CCA3161BD0CD04000120B7 /* NSURL+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3121BD0CD04000120B7 /* NSURL+Queries.swift */; settings = {ASSET_TAGS = (); }; };
+		E6C729911BD17D8500AFEFA4 /* CPDModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6C7298F1BD17D8500AFEFA4 /* CPDModel.xcdatamodeld */; };
+		E6CCA30B1BD0CB81000120B7 /* CPDArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3061BD0CB81000120B7 /* CPDArticle.swift */; };
+		E6CCA30C1BD0CB81000120B7 /* CPDArticleClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3071BD0CB81000120B7 /* CPDArticleClient.swift */; };
+		E6CCA30D1BD0CB81000120B7 /* CPDArticleOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3081BD0CB81000120B7 /* CPDArticleOperationQueue.swift */; };
+		E6CCA3151BD0CD04000120B7 /* NSMutableURLRequest+HTTPBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3111BD0CD04000120B7 /* NSMutableURLRequest+HTTPBody.swift */; };
+		E6CCA3161BD0CD04000120B7 /* NSURL+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3121BD0CD04000120B7 /* NSURL+Queries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		E64EB47B1BC1168B0045E69D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E64EB47C1BC1168B0045E69D /* CPDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPDViewController.swift; sourceTree = "<group>"; };
 		E64EB4851BC117250045E69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E69595E51BE89B6100A62679 /* CPDArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPDArticleViewController.swift; sourceTree = "<group>"; };
 		E6AD5DC41BD0C50000753B24 /* CPDConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPDConstant.swift; sourceTree = "<group>"; };
 		E6AD5DC71BD0C7FA00753B24 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftyJSON.h; path = SwiftyJSON/Source/SwiftyJSON.h; sourceTree = "<group>"; };
 		E6AD5DC81BD0C7FA00753B24 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = SwiftyJSON/Source/SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				E6CCA3081BD0CB81000120B7 /* CPDArticleOperationQueue.swift */,
 				E649724B1BD61148000E140C /* CPDArticleTableViewCell.swift */,
 				E649724C1BD61148000E140C /* CPDArticleTableViewCell.xib */,
+				E69595E51BE89B6100A62679 /* CPDArticleViewController.swift */,
 			);
 			path = Article;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				E64EB4801BC1168B0045E69D /* AppDelegate.swift in Sources */,
 				E6CCA30D1BD0CB81000120B7 /* CPDArticleOperationQueue.swift in Sources */,
 				E6CCA3161BD0CD04000120B7 /* NSURL+Queries.swift in Sources */,
+				E69595E61BE89B6100A62679 /* CPDArticleViewController.swift in Sources */,
 				E6AD5DC91BD0C7FA00753B24 /* SwiftyJSON.swift in Sources */,
 				E6CCA30C1BD0CB81000120B7 /* CPDArticleClient.swift in Sources */,
 			);

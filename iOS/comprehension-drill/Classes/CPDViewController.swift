@@ -18,8 +18,16 @@ class CPDViewController: UIViewController {
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        let indexPath = self.tableView.indexPathForSelectedRow
+        if indexPath != nil { self.tableView.deselectRowAtIndexPath(indexPath!, animated: true) }
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == CPDNSStringFromClass(CPDArticleViewController)) {
+            let articleViewController = segue.destinationViewController as! CPDArticleViewController
+            articleViewController.article = sender as! CPDArticle
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -52,6 +60,7 @@ class CPDViewController: UIViewController {
 
 }
 
+
 /// MARK: - UITableViewDelegate, UITableViewDataSource
 extension CPDViewController: UITableViewDelegate, UITableViewDataSource {
 
@@ -72,6 +81,8 @@ extension CPDViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let article = self.articles[indexPath.row]
+        self.performSegueWithIdentifier(CPDNSStringFromClass(CPDArticleViewController), sender: article)
     }
 
 }
