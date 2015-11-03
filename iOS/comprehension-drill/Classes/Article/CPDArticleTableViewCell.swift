@@ -12,7 +12,7 @@ class CPDArticleTableViewCell: UITableViewCell {
     /// MARK: - class method
 
     class func cpd_height() -> CGFloat {
-        return 54.0
+        return 64.0
     }
 
 
