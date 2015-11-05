@@ -48,9 +48,22 @@
                     <view key="view" contentMode="scaleToFill" id="4Id-ma-gWI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MQU-37-VvP" customClass="QBFlatButton">
+                                <rect key="frame" x="100" y="508" width="120" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="touchUpInsideButton:" destination="h8B-uI-ey0" eventType="touchUpInside" id="2ZD-c5-8mX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q8e-h0-Qjn"/>
+                    <connections>
+                        <outlet property="playButton" destination="MQU-37-VvP" id="4zt-cf-EGJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wc-xi-HwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -37,6 +37,7 @@ class CPDViewController: UIViewController {
 
     /**
      * update article
+     * @param barbuttonItem UIBarButtonItem
      **/
     @IBAction func touchUpInside(barbuttonItem barbuttonItem: UIBarButtonItem) {
         self.updateArticle()

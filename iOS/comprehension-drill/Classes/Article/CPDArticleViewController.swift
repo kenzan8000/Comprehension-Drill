@@ -6,6 +6,8 @@ class CPDArticleViewController: UIViewController {
 
     /// MARK: - property
 
+    @IBOutlet weak var playButton: QBFlatButton!
+
     var article: CPDArticle!
     var speechSynthesizer = AVSpeechSynthesizer()
 
@@ -28,6 +30,14 @@ class CPDArticleViewController: UIViewController {
 
     /// MARK: - event listener
 
+    /**
+     * called when button is touched up inside
+     * @param button UIButton
+     **/
+    @IBAction func touchUpInside(button button: UIButton) {
+        if button == self.playButton { self.play() }
+    }
+
 
     /// MARK: - private api
 
@@ -37,7 +47,8 @@ class CPDArticleViewController: UIViewController {
     private func play() {
         let utterance = AVSpeechUtterance(string: self.article.body)
         utterance.voice = AVSpeechSynthesisVoice(language: self.article.language)
-        utterance.rate = 0.2
+        //utterance.rate = 0.01
+        utterance.rate = 0.60
         utterance.pitchMultiplier = AVSpeechUtteranceMaximumSpeechRate
         self.speechSynthesizer.speakUtterance(utterance)
     }
