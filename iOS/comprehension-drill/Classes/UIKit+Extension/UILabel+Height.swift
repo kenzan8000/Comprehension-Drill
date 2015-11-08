@@ -14,7 +14,7 @@ extension UILabel {
      * @return CGSize
      */
     class func cpd_size(text text: String, font: UIFont, width: CGFloat) -> CGSize {
-        let string = NSAttributedString(string: text, attributes: [NSFontAttributeName: font])
+        let string = text.cpd_justifiedString(font: font)
         let options = NSStringDrawingOptions.UsesLineFragmentOrigin
         let rect = string.boundingRectWithSize(
             CGSizeMake(width, 0),
@@ -33,15 +33,7 @@ extension UILabel {
      */
     func cpd_size() -> CGSize {
         if self.text == nil { return CGSizeMake(self.frame.size.width, 0) }
-
-        let string = NSAttributedString(string: self.text!, attributes: [NSFontAttributeName: self.font])
-        let options = NSStringDrawingOptions.UsesLineFragmentOrigin
-        let rect = string.boundingRectWithSize(
-            self.frame.size,
-            options: options,
-            context: nil
-        )
-        return rect.size
+        return UILabel.cpd_size(text: self.text!, font: self.font, width: self.frame.size.width)
     }
 
 }

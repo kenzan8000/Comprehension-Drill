@@ -17,6 +17,7 @@
 		E64EB4861BC117250045E69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E64EB4851BC117250045E69D /* Assets.xcassets */; };
 		E66A3F131BEB385C003054D5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66A3F121BEB385C003054D5 /* AVFoundation.framework */; };
 		E69595E61BE89B6100A62679 /* CPDArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69595E51BE89B6100A62679 /* CPDArticleViewController.swift */; };
+		E69E2B731BEF1EB8003F7655 /* String+Justified.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69E2B721BEF1EB8003F7655 /* String+Justified.swift */; };
 		E6AD5DC51BD0C50000753B24 /* CPDConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD5DC41BD0C50000753B24 /* CPDConstant.swift */; };
 		E6AD5DC91BD0C7FA00753B24 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD5DC81BD0C7FA00753B24 /* SwiftyJSON.swift */; };
 		E6BB73E21BD1E63400DFDC6F /* CPDConstant-Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BB73E11BD1E63400DFDC6F /* CPDConstant-Private.swift */; };
@@ -46,6 +47,7 @@
 		E64EB4851BC117250045E69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E66A3F121BEB385C003054D5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E69595E51BE89B6100A62679 /* CPDArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPDArticleViewController.swift; sourceTree = "<group>"; };
+		E69E2B721BEF1EB8003F7655 /* String+Justified.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Justified.swift"; sourceTree = "<group>"; };
 		E6AD5DC41BD0C50000753B24 /* CPDConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPDConstant.swift; sourceTree = "<group>"; };
 		E6AD5DC71BD0C7FA00753B24 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftyJSON.h; path = SwiftyJSON/Source/SwiftyJSON.h; sourceTree = "<group>"; };
 		E6AD5DC81BD0C7FA00753B24 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = SwiftyJSON/Source/SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		E6CCA30E1BD0CD04000120B7 /* NSFoundation+Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E69E2B721BEF1EB8003F7655 /* String+Justified.swift */,
 				E6CCA3111BD0CD04000120B7 /* NSMutableURLRequest+HTTPBody.swift */,
 				E6CCA3121BD0CD04000120B7 /* NSURL+Queries.swift */,
 			);
@@ -345,6 +348,7 @@
 				E649724D1BD61148000E140C /* CPDArticleTableViewCell.swift in Sources */,
 				E6CCA30B1BD0CB81000120B7 /* CPDArticle.swift in Sources */,
 				E64EB4801BC1168B0045E69D /* AppDelegate.swift in Sources */,
+				E69E2B731BEF1EB8003F7655 /* String+Justified.swift in Sources */,
 				E6CCA30D1BD0CB81000120B7 /* CPDArticleOperationQueue.swift in Sources */,
 				E6CCA3161BD0CD04000120B7 /* NSURL+Queries.swift in Sources */,
 				E69595E61BE89B6100A62679 /* CPDArticleViewController.swift in Sources */,
@@ -392,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "7fc22d5f-7804-45a3-903f-b80addad5b13";
@@ -430,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "a2554bf6-edbc-47a5-8b4c-823eb8615863";
 				SDKROOT = iphoneos;
