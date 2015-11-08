@@ -7,5 +7,8 @@ pod 'CocoaSecurity'
 # network
 pod 'ISHTTPOperation'
 
+# font
+pod 'ionicons'
+
 # user interface
 pod 'QBFlatButton'
