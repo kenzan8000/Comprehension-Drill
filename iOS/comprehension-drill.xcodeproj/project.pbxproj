@@ -30,6 +30,7 @@
 		E6CCA3161BD0CD04000120B7 /* NSURL+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCA3121BD0CD04000120B7 /* NSURL+Queries.swift */; };
 		E6D27D7E1BEF02B100DACE1F /* CPDArticleBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D27D7C1BEF02B100DACE1F /* CPDArticleBodyTableViewCell.swift */; };
 		E6D27D7F1BEF02B100DACE1F /* CPDArticleBodyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6D27D7D1BEF02B100DACE1F /* CPDArticleBodyTableViewCell.xib */; };
+		E6D27D841BEF09D800DACE1F /* UILabel+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D27D821BEF09D800DACE1F /* UILabel+Height.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		E6CCA3121BD0CD04000120B7 /* NSURL+Queries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Queries.swift"; sourceTree = "<group>"; };
 		E6D27D7C1BEF02B100DACE1F /* CPDArticleBodyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPDArticleBodyTableViewCell.swift; sourceTree = "<group>"; };
 		E6D27D7D1BEF02B100DACE1F /* CPDArticleBodyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPDArticleBodyTableViewCell.xib; sourceTree = "<group>"; };
+		E6D27D821BEF09D800DACE1F /* UILabel+Height.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Height.swift"; sourceTree = "<group>"; };
 		E6ECA78A1BC1154400B50521 /* comprehension-drill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "comprehension-drill.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 				E6CCA3031BD0CB81000120B7 /* Article */,
 				E6C7298A1BD17D3C00AFEFA4 /* Model */,
 				E6CCA30E1BD0CD04000120B7 /* NSFoundation+Extension */,
+				E6D27D801BEF09D800DACE1F /* UIKit+Extension */,
 				E6AD5DC61BD0C7E900753B24 /* SwiftyJSON */,
 			);
 			path = Classes;
@@ -178,6 +181,14 @@
 				E6CCA3121BD0CD04000120B7 /* NSURL+Queries.swift */,
 			);
 			path = "NSFoundation+Extension";
+			sourceTree = "<group>";
+		};
+		E6D27D801BEF09D800DACE1F /* UIKit+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E6D27D821BEF09D800DACE1F /* UILabel+Height.swift */,
+			);
+			path = "UIKit+Extension";
 			sourceTree = "<group>";
 		};
 		E6ECA7811BC1154400B50521 = {
@@ -325,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6AD5DC51BD0C50000753B24 /* CPDConstant.swift in Sources */,
+				E6D27D841BEF09D800DACE1F /* UILabel+Height.swift in Sources */,
 				E6C729911BD17D8500AFEFA4 /* CPDModel.xcdatamodeld in Sources */,
 				E6CCA3151BD0CD04000120B7 /* NSMutableURLRequest+HTTPBody.swift in Sources */,
 				E6C7298C1BD17D3C00AFEFA4 /* CPDCoreDataManager.swift in Sources */,
