@@ -9,6 +9,7 @@ class CPDViewController: UIViewController {
 
 
     /// MARK: - life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +29,7 @@ class CPDViewController: UIViewController {
             articleViewController.article = sender as! CPDArticle
         }
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -72,11 +74,8 @@ extension CPDViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let article = self.articles[indexPath.row]
 
-        let cell = UITableViewCell(
-            style: UITableViewCellStyle.Default,
-            reuseIdentifier: CPDNSStringFromClass(CPDArticleTableViewCell)
-        )
-        cell.textLabel!.text = article.title
+        let cell = CPDArticleTableViewCell.cpd_cell()
+        cell.titleLabel.text = article.title
 
         return cell
     }
@@ -86,4 +85,9 @@ extension CPDViewController: UITableViewDelegate, UITableViewDataSource {
         self.performSegueWithIdentifier(CPDNSStringFromClass(CPDArticleViewController), sender: article)
     }
 
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return CPDArticleTableViewCell.cpd_height()
+    }
+
 }
+

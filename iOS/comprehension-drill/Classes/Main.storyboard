@@ -49,20 +49,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MQU-37-VvP" customClass="QBFlatButton">
-                                <rect key="frame" x="100" y="508" width="120" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <state key="normal" title="Play"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fdC-hd-Qdn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <action selector="touchUpInsideButton:" destination="h8B-uI-ey0" eventType="touchUpInside" id="2ZD-c5-8mX"/>
+                                    <outlet property="dataSource" destination="h8B-uI-ey0" id="lis-Hz-tqt"/>
+                                    <outlet property="delegate" destination="h8B-uI-ey0" id="cNR-kD-xxf"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q8e-h0-Qjn"/>
                     <connections>
-                        <outlet property="playButton" destination="MQU-37-VvP" id="4zt-cf-EGJ"/>
+                        <outlet property="tableView" destination="fdC-hd-Qdn" id="rGy-eE-JBC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wc-xi-HwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
