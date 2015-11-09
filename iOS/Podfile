@@ -11,4 +11,4 @@ pod 'ISHTTPOperation'
 pod 'ionicons'
 
 # user interface
-pod 'QBFlatButton'
+#pod 'QBFlatButton'

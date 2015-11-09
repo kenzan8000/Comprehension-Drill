@@ -50,6 +50,7 @@ class CPDArticleBodyTableViewCell: UITableViewCell {
      * @param isSelected Bool
      **/
     func design(paragraph paragraph: String, isSelected: Bool) {
+        self.paragraphLabel.textColor = isSelected ? UIColor.darkGrayColor() : UIColor.lightGrayColor()
         self.paragraphLabel.attributedText = paragraph.cpd_justifiedString(font: self.paragraphLabel.font)
         self.paragraphLabel.textAlignment = NSTextAlignment.Justified
         self.paragraphLabel.preferredMaxLayoutWidth = self.paragraphLabel.frame.width
