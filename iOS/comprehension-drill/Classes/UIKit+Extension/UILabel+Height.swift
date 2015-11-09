@@ -14,14 +14,17 @@ extension UILabel {
      * @return CGSize
      */
     class func cpd_size(text text: String, font: UIFont, width: CGFloat) -> CGSize {
+        //let string = text.cpd_justifiedString(font: font)
         let string = text.cpd_justifiedString(font: font)
-        let options = NSStringDrawingOptions.UsesLineFragmentOrigin
+        //let options = NSStringDrawingOptions.UsesLineFragmentOrigin
+        let options = NSStringDrawingOptions.UsesLineFragmentOrigin.union(NSStringDrawingOptions.UsesFontLeading)
         let rect = string.boundingRectWithSize(
-            CGSizeMake(width, 0),
+            CGSizeMake(width, CGFloat(MAXFLOAT)),
             options: options,
             context: nil
         )
         return rect.size
+        //return CGSizeMake(rect.width, rect.height * 1.3)
     }
 
 

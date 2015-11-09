@@ -17,9 +17,9 @@ class CPDArticleBodyTableViewCell: UITableViewCell {
      * @return CGFloat
      **/
     class func cpd_height(paragraph paragraph: String) -> CGFloat {
-        let font = UIFont(name: "Helvetica Neue", size: 14.0)
-        let offset = CGFloat(14.0)
-        let labelHeight = UILabel.cpd_size(text: paragraph, font: font!, width: UIScreen.mainScreen().bounds.width).height
+        let font = UIFont(name: "Helvetica Neue", size: 17.0)
+        let offset = CGFloat(32.0)
+        let labelHeight = UILabel.cpd_size(text: paragraph, font: font!, width: (UIScreen.mainScreen().bounds.width - offset * 2)).height
         return (labelHeight + offset * 2)
     }
 
@@ -53,24 +53,10 @@ class CPDArticleBodyTableViewCell: UITableViewCell {
         self.paragraphLabel.attributedText = paragraph.cpd_justifiedString(font: self.paragraphLabel.font)
         self.paragraphLabel.textAlignment = NSTextAlignment.Justified
         self.paragraphLabel.preferredMaxLayoutWidth = self.paragraphLabel.frame.width
-        self.paragraphLabel.sizeToFit()
-/*
         self.frame = CGRectMake(
-            self.frame.origin.x,
-            self.frame.origin.y,
-            self.frame.width,
-            self.paragraphLabel.frame.origin.y + self.paragraphLabel.frame.height
+            self.frame.origin.x, self.frame.origin.y,
+            self.frame.width, CPDArticleBodyTableViewCell.cpd_height(paragraph: paragraph)
         )
-*/
-/*
-        self.paragraphLabel.frame = CGRectMake(
-            self.paragraphLabel.frame.origin.x,
-            self.paragraphLabel.frame.origin.y - self.frame.height / 2,
-            self.paragraphLabel.frame.width,
-            self.paragraphLabel.frame.height
-        )
-        CPDLOG(self.frame)
-*/
     }
 
 }

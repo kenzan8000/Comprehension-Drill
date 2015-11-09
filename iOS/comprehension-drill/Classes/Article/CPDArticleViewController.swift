@@ -45,29 +45,30 @@ class CPDArticleViewController: UIViewController {
 //    @IBAction func touchUpInside(button button: UIButton) {
 //        if button == self.playButton { self.play() }
 //    }
-//
-//
-//    /// MARK: - private api
-//
-//    /**
-//     * play TTS
-//     **/
-//    private func play() {
-//        let utterance = AVSpeechUtterance(string: self.article.body)
-//        utterance.voice = AVSpeechSynthesisVoice(language: self.article.language)
-//        //utterance.rate = 0.01
-//        //utterance.rate = 0.60
-//        utterance.rate = 0.45
-//        utterance.pitchMultiplier = AVSpeechUtteranceMaximumSpeechRate
-//        self.speechSynthesizer.speakUtterance(utterance)
-//    }
-//
-//    /**
-//     * stop TTS
-//     **/
-//    private func stop() {
-//        self.speechSynthesizer.pauseSpeakingAtBoundary(AVSpeechBoundary.Immediate)
-//    }
+
+
+    /// MARK: - private api
+
+    /**
+     * play TTS
+     * @param paragraph String
+     **/
+    private func play(paragraph paragraph: String) {
+        let utterance = AVSpeechUtterance(string: paragraph)
+        utterance.voice = AVSpeechSynthesisVoice(language: self.article.language)
+        //utterance.rate = 0.01
+        //utterance.rate = 0.60
+        utterance.rate = 0.45
+        utterance.pitchMultiplier = AVSpeechUtteranceMaximumSpeechRate
+        self.speechSynthesizer.speakUtterance(utterance)
+    }
+
+    /**
+     * stop TTS
+     **/
+    private func stop() {
+        self.speechSynthesizer.pauseSpeakingAtBoundary(AVSpeechBoundary.Immediate)
+    }
 
 /*
     public func stopSpeakingAtBoundary(boundary: AVSpeechBoundary) -> Bool
@@ -98,6 +99,8 @@ extension CPDArticleViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let paragraph = self.paragraphs[indexPath.row]
+        self.play(paragraph: paragraph)
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
