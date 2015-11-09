@@ -4,11 +4,36 @@ import UIKit
 class CPDViewController: UIViewController {
 
     /// MARK: - property
+    @IBOutlet weak var leftBarButton: UIButton!
+    @IBOutlet weak var rightBarButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+
     var articles: [CPDArticle] = []
 
 
     /// MARK: - life cycle
+    override func loadView() {
+        super.loadView()
+
+        // left bar button
+        self.leftBarButton.setImage(
+            IonIcons.imageWithIcon(
+                ion_android_settings,
+                iconColor: UIColor.grayColor(),
+                iconSize: 22,
+                imageSize: CGSizeMake(22, 22)),
+            forState: .Normal
+        )
+        // right bar button
+        self.rightBarButton.setImage(
+            IonIcons.imageWithIcon(
+                ion_refresh,
+                iconColor: UIColor.grayColor(),
+                iconSize: 22,
+                imageSize: CGSizeMake(22, 22)),
+            forState: .Normal
+        )
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +64,11 @@ class CPDViewController: UIViewController {
 
     /**
      * update article
-     * @param barbuttonItem UIBarButtonItem
+     * @param barButton UIButton
      **/
-    @IBAction func touchUpInside(barbuttonItem barbuttonItem: UIBarButtonItem) {
-        self.updateArticle()
+    @IBAction func touchUpInside(barButton barButton: UIButton) {
+        if barButton == leftBarButton { }
+        else if barButton == self.rightBarButton { self.updateArticle() }
     }
 
 

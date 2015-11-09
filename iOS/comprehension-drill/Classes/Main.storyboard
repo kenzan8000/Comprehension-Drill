@@ -26,13 +26,28 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="2cl-nF-MO3">
-                        <barButtonItem key="rightBarButtonItem" title="update" id="mE7-o4-wKy">
-                            <connections>
-                                <action selector="touchUpInsideBarbuttonItem:" destination="BYZ-38-t0r" id="dqv-Ms-9hN"/>
-                            </connections>
+                        <barButtonItem key="leftBarButtonItem" id="njv-aO-dho">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cOc-9B-bdt">
+                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="touchUpInsideBarButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Dt-gf-936"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="bY5-Dy-IZf">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5R6-5C-gBQ">
+                                <rect key="frame" x="233" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="touchUpInsideBarButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZ3-GK-JGc"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="leftBarButton" destination="cOc-9B-bdt" id="nfK-JM-Ohw"/>
+                        <outlet property="rightBarButton" destination="5R6-5C-gBQ" id="TGr-hX-S9g"/>
                         <outlet property="tableView" destination="fnT-hW-YAb" id="3Oe-9e-UqN"/>
                         <segue destination="h8B-uI-ey0" kind="push" identifier="CPDArticleViewController" id="RXq-7D-MXF"/>
                     </connections>
