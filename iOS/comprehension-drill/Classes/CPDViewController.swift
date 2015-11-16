@@ -18,7 +18,7 @@ class CPDViewController: UIViewController {
         // left bar button
         self.leftBarButton.setImage(
             IonIcons.imageWithIcon(
-                ion_android_settings,
+                ion_refresh,
                 iconColor: UIColor.grayColor(),
                 iconSize: 22,
                 imageSize: CGSizeMake(22, 22)),
@@ -27,7 +27,7 @@ class CPDViewController: UIViewController {
         // right bar button
         self.rightBarButton.setImage(
             IonIcons.imageWithIcon(
-                ion_refresh,
+                ion_android_settings,
                 iconColor: UIColor.grayColor(),
                 iconSize: 22,
                 imageSize: CGSizeMake(22, 22)),
@@ -67,8 +67,8 @@ class CPDViewController: UIViewController {
      * @param barButton UIButton
      **/
     @IBAction func touchUpInside(barButton barButton: UIButton) {
-        if barButton == leftBarButton { }
-        else if barButton == self.rightBarButton { self.updateArticle() }
+        if barButton == leftBarButton { self.updateArticle() }
+        else if barButton == self.rightBarButton { }
     }
 
 

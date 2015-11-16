@@ -8,6 +8,9 @@ class CPDArticleViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var leftBarButton: UIButton!
+    @IBOutlet weak var rightBarButton: UIButton!
+
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
@@ -22,6 +25,25 @@ class CPDArticleViewController: UIViewController {
 
     override func loadView() {
         super.loadView()
+
+        // left bar button
+        self.leftBarButton.setImage(
+            IonIcons.imageWithIcon(
+                ion_ios_arrow_back,
+                iconColor: UIColor.grayColor(),
+                iconSize: 22,
+                imageSize: CGSizeMake(22, 22)),
+            forState: .Normal
+        )
+        // right bar button
+        self.rightBarButton.setImage(
+            IonIcons.imageWithIcon(
+                ion_android_settings,
+                iconColor: UIColor.grayColor(),
+                iconSize: 22,
+                imageSize: CGSizeMake(22, 22)),
+            forState: .Normal
+        )
 
         self.speechSynthesizer.delegate = self
 
@@ -66,6 +88,8 @@ class CPDArticleViewController: UIViewController {
         if button == self.playButton { self.play() }
         else if button == self.pauseButton { self.pause() }
         else if button == self.stopButton { self.stop() }
+        else if button == self.leftBarButton { self.navigationController!.popViewControllerAnimated(true) }
+        else if button == self.rightBarButton { }
     }
 
 

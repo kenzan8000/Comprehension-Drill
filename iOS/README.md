@@ -1,7 +1,7 @@
 1. Add /iOS/comprehension-drill/Classes/CPDConstant-Private.swift
 
 ```
-$ vim config/encryption.yml
+$ vim /iOS/comprehension-drill/Classes/CPDConstant-Private.swift
 ```
 
 ```
